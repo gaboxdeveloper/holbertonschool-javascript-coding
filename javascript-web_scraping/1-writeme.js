@@ -5,8 +5,6 @@ const writeFile = (filePath, string) => {
   fs.writeFile(filePath, string, 'utf-8', (err) => {
     if (err) {
       console.error(err);
-    } else {
-      console.log('Archivo escrito exitosamente');
     }
   });
 };
