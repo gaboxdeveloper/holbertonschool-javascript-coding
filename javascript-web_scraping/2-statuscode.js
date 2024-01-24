@@ -2,7 +2,7 @@
 const request = require('request');
 
 const statusCode = (url) => {
-  request(url, (response) => {
+  request(url, (err, response) => {
     if (url) {
       console.log('code:', response.statusCode);
     }
