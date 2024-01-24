@@ -3,7 +3,9 @@ const request = require('request');
 
 const statusCode = (url) => {
   request(url, (err, response) => {
-    if (url) {
+    if (!err) {
+      console.log('code:', response.statusCode);
+    } else {
       console.log('code:', response.statusCode);
     }
   });
