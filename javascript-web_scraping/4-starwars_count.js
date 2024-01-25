@@ -8,7 +8,6 @@ request(url, (err, response, body) => {
     console.log(err);
   } else {
     const films = JSON.parse(body).results;
-    console.log(films);
     const filmsWithWedge = films.filter(film =>
       film.characters.some(characterUrl => characterUrl.endsWith(`/${characterId}/`))
     );
